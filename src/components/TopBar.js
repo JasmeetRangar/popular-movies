@@ -5,7 +5,7 @@ const useStyles = makeStyles(() => ({
   bar: {
     backgroundColor: "#746A64",
     color: "white",
-		width: "90vw",
+		width: "100vw",
 		height: "64px",
     fontSize: "20px",
 		fontWeight: 600,

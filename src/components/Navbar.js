@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
 	nav: {
-		width: "95vw",
+		width: "100vw",
 		height: "64px",
 		backgroundColor: "#212121",
 		color: "white",
@@ -20,7 +20,10 @@ const useStyles = makeStyles(() => ({
   backButtonLink: {
     textDecoration: "none",
     margin: "5px",
-  }
+  },
+	moreButton: {
+		marginRight: "40px"
+	}
 }));
 
 function Navbar(props) {
@@ -36,7 +39,7 @@ function Navbar(props) {
         }
 				{title}
 			</p>
-			<MoreVertIcon />
+			<MoreVertIcon className={classes.moreButton}/>
 		</div>
 	);
 }
