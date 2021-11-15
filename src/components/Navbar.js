@@ -1,35 +1,44 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
 	nav: {
-		position: "absolute",
 		width: "95vw",
-    height: "64px",
-		left: "0px",
-		top: "0px",
-    backgroundColor: "#212121",
-    color: "white",
-    fontSize: "20px",
-    fontWeight: 600,
-    paddingLeft: "20px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
+		height: "64px",
+		backgroundColor: "#212121",
+		color: "white",
+		fontSize: "20px",
+		fontWeight: 600,
+		paddingLeft: "20px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "space-between",
 	},
-  
+  backButtonLink: {
+    textDecoration: "none",
+    margin: "5px",
+  }
 }));
 
 function Navbar(props) {
 	const classes = useStyles();
-  const {title} = props;
-  return (
-    <div className={classes.nav} > 
-     <p className={title}>{title}</p>
-    <MoreVertIcon />
-    </div>
-  )
+	const { title, backButton } = props;
+	return (
+		<div className={classes.nav}>
+			<p className={title}>
+				{backButton && 
+        <Link className={classes.backButtonLink} to="/">
+        <ArrowBackIcon />
+        </Link>
+        }
+				{title}
+			</p>
+			<MoreVertIcon />
+		</div>
+	);
 }
 
 export default Navbar;

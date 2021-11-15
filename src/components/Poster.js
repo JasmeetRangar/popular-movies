@@ -21,9 +21,9 @@ const useStyles = makeStyles(() => ({
 function Poster(props) {
 	const { movie } = props;
 	const classes = useStyles();
-
+  let movieURL = `/movies/${movie.id}`
 	return (
-		<Link className={classes.poster} to="/">
+		<Link className={classes.poster} to={movieURL}>
 			<img
 				src={helpers.getPosterURL(movie.poster_path)}
 				alt={movie.original_title}
