@@ -1,7 +1,7 @@
 
 ## Getting Started
 
-This is a ReactJS app. You will need React and npm installed. Fork the project from the repo.
+This is a ReactJS app. You will need React and npm installed. Clone the project from the repo.
 
 ### Install Dependencies
 
